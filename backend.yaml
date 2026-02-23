@@ -21,7 +21,7 @@
 
   - name: create app directory if does not exist
     ansible.builtin.file:
-    path: /app 
-    state: directory
-        
+      path: /app 
+      state: directory
+
       
