@@ -11,11 +11,17 @@
     ansible.builtin.command: dnf module enable nodejs:20 -y
 
   - name: install nodejs 
-    ansible.builtin.dnf: 
+    ansible.builtin.dnf: #only works for redhat family
       name: nodejs 
       state: installed 
 
   - name: create expense user 
     ansible.builtin.user:
       name: expense 
+
+  - name: create app directory if does not exist
+    ansible.builtin.file:
+    path: /app 
+    state: directory
+        
       
