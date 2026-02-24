@@ -59,7 +59,9 @@
       login_password: "{{ mysql_root_password }}" 
       login_host: "{{ login_host }}"
       target: /app/schema/backend.sql 
-      state: dump 
+      state: dump
+      name: all 
+       
   
 
       
